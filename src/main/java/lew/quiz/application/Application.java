@@ -5,7 +5,10 @@ import lew.quiz.models.Question;
 import lew.quiz.models.QuizQuestionBool;
 import lew.quiz.models.QuizQuestionMC;
 import lew.quiz.repositories.OpenTDB;
+import lew.quiz.ui.QuizInterface;
 
+import javax.swing.*;
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -18,8 +21,9 @@ public class Application {
         OpenTDB thisQuestionnaire = new OpenTDB();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        List<Question> listOfQuestions = thisQuestionnaire.GetQuestionsFromAPI(12);
+        //List<Question> listOfQuestions = thisQuestionnaire.GetQuestionsFromAPI(12);
 
+        /*
         for (Question currentQuestion : listOfQuestions){
             boolean isCorrect = false;
             System.out.println(currentQuestion.AskTheQuestion());
@@ -38,6 +42,6 @@ public class Application {
                 System.out.println("Bonne Réponse");
             else
                 System.out.println("Mauvaise Réponse");
-        }
+        }*/
     }
 }

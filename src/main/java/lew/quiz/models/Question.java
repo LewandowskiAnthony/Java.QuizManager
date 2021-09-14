@@ -1,5 +1,7 @@
 package lew.quiz.models;
 
+import java.util.List;
+
 public abstract class Question<T> {
 
     protected String _category;
@@ -21,5 +23,7 @@ public abstract class Question<T> {
     public abstract String ShowAnswers();
 
     public abstract String get_type();
+
+    public abstract List<String> get_allAnswers();
 
 }
