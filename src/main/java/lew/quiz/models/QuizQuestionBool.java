@@ -1,5 +1,8 @@
 package lew.quiz.models;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class QuizQuestionBool extends Question<Boolean>{
 
     private String _type= "boolean";
@@ -38,6 +41,14 @@ public class QuizQuestionBool extends Question<Boolean>{
 
     public String get_type() {
         return _type;
+    }
+
+    @Override
+    public List<String> get_allAnswers() {
+        List<String> answers = new ArrayList<>();
+        answers.add("true");
+        answers.add("false");
+        return answers;
     }
 }
 

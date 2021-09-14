@@ -6,6 +6,7 @@ import java.util.List;
 public class QuizQuestionMC extends Question<Character> {
 
     private String _type= "QCM";
+
     private List<String> _allAnswers;
     private String _correctAnswer;
 
@@ -28,6 +29,14 @@ public class QuizQuestionMC extends Question<Character> {
                 ", _incorrectAnswers=" + _allAnswers + '\n' +
                 ", _correctAnswers='" + _correctAnswer + '\'' + '\n' +
                 '}';
+    }
+
+    public List<String> get_allAnswers() {
+        return _allAnswers;
+    }
+
+    public String get_correctAnswer() {
+        return _correctAnswer;
     }
 
     @Override
