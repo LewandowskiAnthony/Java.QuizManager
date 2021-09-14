@@ -4,6 +4,7 @@ import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import lew.quiz.models.Question;
+import lew.quiz.models.QuizQuestionBool;
 import lew.quiz.models.QuizQuestionMC;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -44,6 +45,12 @@ public class OpenTDB {
                     ));
                     break;
                 case "boolean" :
+                    listOfQuestions.add((new QuizQuestionBool(
+                            jarray.getJSONObject(i).getString("category"),
+                            jarray.getJSONObject(i).getString("difficulty"),
+                            jarray.getJSONObject(i).getString("question"),
+                            jarray.getJSONObject(i).getBoolean("correct_answer")
+                    )));
                     break;
                 default:
                     break;

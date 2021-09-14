@@ -1,6 +1,6 @@
 package lew.quiz.models;
 
-public abstract class Question {
+public abstract class Question<T> {
 
     protected String _category;
     protected String _difficulty;
@@ -12,6 +12,14 @@ public abstract class Question {
         _question = question;
     }
 
-    protected abstract String AskTheQuestion();
+    public String AskTheQuestion(){
+        return _question;
+    }
+
+    public abstract boolean CheckAnswer(T answer);
+
+    public abstract String ShowAnswers();
+
+    public abstract String get_type();
 
 }
